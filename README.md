@@ -13,8 +13,9 @@ bundle, the following is possible:
             ladybug_dump($username);
         }
     }
-
 ```
+
+``` jinja
 {{ user.username|ladybug_dump }}
 ```
 
