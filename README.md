@@ -14,9 +14,9 @@ bundle, the following is possible:
         }
     }
 
-``` jinja
+```
 {{ user.username|ladybug_dump }}
-````
+```
 
 Getting as a result:
 
