@@ -11,7 +11,6 @@ class LadybugExtension extends \Twig_Extension
     
     public function __construct(ContainerInterface $container)
     {
-        //echo $container->get('router')->generate('index');die();
         $this->container = $container;
     }
     
@@ -30,8 +29,7 @@ class LadybugExtension extends \Twig_Extension
         
         $ladybug = \Ladybug\Dumper::getInstance();
         $html = $ladybug->dump($var);
-        //echo 1;
-        //var_dump($var);
+     
         return $html;
     }
 
