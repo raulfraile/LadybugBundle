@@ -14,7 +14,7 @@ bundle, the following is possible:
         }
     }
 
-``` twig
+``` jinja
 {{ user.username|ladybug_dump }}
 ```
 
@@ -133,3 +133,17 @@ It is possible to dump any variable, including arrays, objects and resources:
 ]</pre>
 
 The same can be accomplished using the Twig filter `ladybug_dump`.
+
+## Helpers
+
+The are 3 helpers that can be used in any controller:
+
+`ladybug_dump($var1[, $var2[, ...]])`: Dumps one or more variables
+
+`ladybug_dump_die($var1[, $var2[, ...]])`: Dumps one or more variables and 
+terminates the current script
+
+`ladybug_dump_return($var1[, $var2[, ...]])`: Dumps one or more variables and
+returns the string
+
+Just `ladybug_dump` can be used inside Twig templates.
