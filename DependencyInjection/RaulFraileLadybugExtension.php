@@ -13,6 +13,5 @@ class RaulFraileLadybugExtension extends Extension
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
         
-        //print_r($loader);die();
     }
 }
