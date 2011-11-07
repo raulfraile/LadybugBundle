@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://symfony.com/schema/dic/services/services-1.0.xsd" uri="symfony.com/schema/dic/services/services-1.0.xsd"/>
+</catalog>
