@@ -106,11 +106,17 @@ It is possible to dump any variable, including arrays, objects and resources:
     ladybug_dump($var)
 ```
 
-<pre><strong><em>array</em></strong> [
-    [0] => <strong><em>int</em></strong> <span style="color:#800">1</span>
-    [1] => <strong><em>int</em></strong> <span style="color:#800">2</span>
-    [2] => <strong><em>int</em></strong> <span style="color:#800">3</span>
-]</pre>
+<img style="border:1px solid #ccc; padding:1px" src="https://github.com/raulfraile/Ladybug/raw/master/examples/images/array_example.png" />
+
+### Dumping an object
+
+``` php
+<?php
+    $var = new Foo();
+    ladybug_dump($var)
+```
+
+<img style="border:1px solid #ccc; padding:1px" src="https://github.com/raulfraile/Ladybug/raw/master/examples/images/object_example.png" />
 
 ### Dumping a GD image
 
@@ -120,18 +126,7 @@ It is possible to dump any variable, including arrays, objects and resources:
     ladybug_dump($img);
 ```
     
-<pre><strong><em>resource(gd)</em></strong> [
-    [gd] => [
-        [version] => 2.0
-        [support] => FreeType[with freetype], T1Lib, GIF, JPEG, PNG, WBMP
-    ]
-    [width] => 32px
-    [height] => 32px
-    [colors_palette] => 0
-    [true_color] => TRUE
-    [image] =>
-        <img style="border:1px solid #ccc; padding:1px" src="https://github.com/raulfraile/Ladybug/raw/master/examples/images/ladybug.png" />
-]</pre>
+<img style="border:1px solid #ccc; padding:1px" src="https://github.com/raulfraile/Ladybug/raw/master/examples/images/gd_example.png" />
 
 The same can be accomplished using the Twig filter `ladybug_dump`.
 
