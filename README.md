@@ -143,3 +143,8 @@ terminates the current script
 returns the string
 
 Just `ladybug_dump` can be used inside Twig templates.
+        
+## Symfony and Doctrine class reference
+
+Ladybug automatically detects Symfony and Doctrine classes, and link them to the
+official documentation.
