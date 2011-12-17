@@ -40,7 +40,7 @@ add the following entries to the `deps` in the root of your project file:
 
 [RaulFraileLadybugBundle]
     git=http://github.com/raulfraile/LadybugBundle.git
-    target=bundles/RaulFraile/Bundle/LadybugBundle
+    target=/bundles/RaulFraile/Bundle/LadybugBundle
 ```
 
 Next, update your vendors by running:
@@ -142,7 +142,7 @@ terminates the current script
 `ladybug_dump_return($var1[, $var2[, ...]])`: Dumps one or more variables and
 returns the string
 
-Just `ladybug_dump` can be used inside Twig templates.
+Only `ladybug_dump` can be used inside Twig templates.
         
 ## Symfony and Doctrine class reference
 
