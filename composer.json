@@ -2,7 +2,7 @@
     "name": "raulfraile/LadybugBundle",
     "type": "symfony-bundle",
     "description": "Symfony2 bundle for Ladybug library (Simple and Extensible PHP Dumper)",
-    "keywords": ["ladybug", dump", "tree", "twig"],
+    "keywords": ["ladybug", "dump", "tree", "twig"],
     "homepage": "https://github.com/raulfraile/LadybugBundle",
     "license": "MIT",
     "authors": [
