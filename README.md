@@ -161,7 +161,20 @@ There are also some shortcuts in case you are not using this function names:
 
 Only `ladybug_dump` can be used inside Twig templates.
         
-## Symfony and Doctrine class reference
+## Symfony command
 
-Ladybug automatically detects Symfony and Doctrine classes, and link them to the
+There are two Symfony commands to dump an instance of a given class or export it to
+a file, in JSON, YAML or XML format.
+
+``` bash
+# php app/console ladybug:dump class_name [--all]
+# php app/console ladybug:export class_name target [--format=yaml]
+
+php app/console ladybug:dump "Symfony\Component\HttpFoundation\Request"
+php app/console ladybug:export "Symfony\Component\HttpFoundation\Request" export.json --format=json
+```
+
+## API reference
+
+Ladybug automatically detects Symfony, Doctrine and Silex classes, and link them to the
 official documentation.
