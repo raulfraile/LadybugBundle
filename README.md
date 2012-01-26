@@ -1,6 +1,8 @@
 LadybugBundle
 =============
 
+[![Build Status](https://secure.travis-ci.org/raulfraile/LadybugBundle.png)](http://travis-ci.org/raulfraile/LadybugBundle)
+
 This bundle provides an easy and extensible var_dump/print_r replacement for
 Symfony2 projects, both in controllers or Twig templates. For example, with this
 bundle, the following is possible:
