@@ -178,5 +178,7 @@ php app/console ladybug:export "Symfony\Component\HttpFoundation\Request" export
 
 ## API reference
 
-Ladybug automatically detects Symfony, Doctrine and Silex classes, and link them to the
+Ladybug automatically detects Symfony, Doctrine, Twig and Silex classes, and link them to the
 official documentation.
+
+<img style="border:1px solid #ccc; padding:1px" src="https://github.com/raulfraile/Ladybug/raw/master/examples/images/apilinks_example.png" />
