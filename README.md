@@ -193,7 +193,7 @@ class TestController
     public function testAction()
     {
         $var = 1;
-        $this->get('ladybug')->log(1);    
+        $this->get('ladybug')->log($var);    
     }
 ```
 
