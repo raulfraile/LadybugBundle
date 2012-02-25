@@ -183,7 +183,7 @@ see the results in a tab of the Symfony profiler:
 
 <img style="border:1px solid #ccc; padding:1px" src="https://github.com/raulfraile/LadybugBundle/raw/master/Resources/doc/images/symfony_profiler.png" />
 
-To make use of the Ladybug logger, get the `ladybug` service from the DIC, and call the `log`
+To make use of the Ladybug logger, grab the `ladybug` service from the DIC, and call the `log`
 method:
 
 ``` php
