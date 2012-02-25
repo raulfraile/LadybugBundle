@@ -5,8 +5,15 @@
 
     <services>
         <service id="ladybug.twig.extension" class="RaulFraile\Bundle\LadybugBundle\Twig\Extension\LadybugExtension" public="false">
-    		<tag name="twig.extension" />
-                <argument type="service" id="service_container"></argument>
-    	</service>
+            <tag name="twig.extension" />
+            <argument type="service" id="service_container"></argument>
+        </service>
+
+        <service id="data_collector.ladybug_data_collector" class="RaulFraile\Bundle\LadybugBundle\DataCollector\LadybugDataCollector">
+        	<argument type="service" id="service_container" />
+            <tag name="data_collector" template="RaulFraileLadybugBundle:Collector:ladybug" id="ladybug" />
+        </service>
+
+        <service id="ladybug" alias="data_collector.ladybug_data_collector" />
     </services>
 </container>

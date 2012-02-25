@@ -176,6 +176,27 @@ php app/console ladybug:dump "Symfony\Component\HttpFoundation\Request"
 php app/console ladybug:export "Symfony\Component\HttpFoundation\Request" export.json --format=json
 ```
 
+## Symfony profiler integration
+
+Instead of printing out the dump tree inside the HTML document, you can use the Ladybug logger and
+see the results in a tab of the Symfony profiler:
+
+<img style="border:1px solid #ccc; padding:1px" src="https://github.com/raulfraile/LadybugBundle/raw/master/Resources/doc/images/symfony_profiler.png" />
+
+To make use of the Ladybug logger, get the `ladybug` service from the DIC, and call the `log`
+method:
+
+``` php
+<?php
+class TestController
+{
+    public function testAction()
+    {
+        $var = 1;
+        $this->get('ladybug')->log(1);    
+    }
+```
+
 ## API reference
 
 Ladybug automatically detects Symfony, Doctrine, Twig and Silex classes, and link them to the
