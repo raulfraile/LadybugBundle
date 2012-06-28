@@ -1,5 +1,5 @@
 {
-    "name": "raulfraile/LadybugBundle",
+    "name": "raulfraile/ladybug-bundle",
     "type": "symfony-bundle",
     "description": "Symfony2 bundle for Ladybug library (Simple and Extensible PHP Dumper)",
     "keywords": ["ladybug", "dump", "tree", "twig"],
@@ -13,9 +13,9 @@
         }
     ],
     "require": {
-        "php": ">=5.3.2",
-        "symfony/symfony": "2.*",
-        "raulfraile/ladybug": ">=0.5"
+        "php":                       ">=5.3.2",
+        "symfony/framework-bundle":  ">=2.0.0",
+        "raulfraile/ladybug":        ">=0.5"
     },
     "autoload": {
         "psr-0": { "RaulFraile\\LadybugBundle": "" }
