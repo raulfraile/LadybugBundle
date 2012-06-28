@@ -27,10 +27,12 @@ Getting as a result:
 
 ## Installation
 
-To install this bundle, you'll need both the [Ladybug library](/raulfraile/Ladybug)
-and this bundle. Installation depends on how your project is setup:
+### Step 1: Install vendors
 
-### Step 1: Installation using the `bin/vendors.php` method
+To install this bundle, you'll need both the [Ladybug library](/raulfraile/Ladybug)
+and this bundle. Installation depends on your version of Symfony:
+
+#### Symfony 2.0.x: `bin/vendors.php` method
 
 If you're using the `bin/vendors.php` method to manage your vendor libraries,
 add the following entries to the `deps` in the root of your project file:
@@ -51,20 +53,7 @@ Next, update your vendors by running:
 $ ./bin/vendors
 ```
 
-Skip down to *Step 2*.
-
-### Step 1 (alternative): Installation with submodules
-
-If you're managing your vendor libraries with submodules, first create the
-`vendor/bundles/RaulFraile/Bundle` directory and next add the two submodules:
-
-``` bash
-$ git submodule add git://github.com/raulfraile/Ladybug.git vendor/ladybug
-$ git submodule add git://github.com/raulfraile/LadybugBundle.git vendor/bundles/RaulFraile/Bundle/LadybugBundle
-```
-### Step2: Configure the autoloader
-
-Add the following entries to your autoloader:
+Finally, add the following entries to your autoloader:
 
 ``` php
 <?php
@@ -72,13 +61,34 @@ Add the following entries to your autoloader:
 
 $loader->registerNamespaces(array(
     // ...
-
     'Ladybug'           => __DIR__.'/../vendor/ladybug/lib',
     'RaulFraile'        => __DIR__.'/../vendor/bundles',
 ));
 ```
 
-### Step3: Enable the bundle
+#### Symfony 2.1.x: Composer
+
+[Composer](http://packagist.org/about-composer) is a project dependency manager for PHP. You have to list
+your dependencies in a `composer.json` file:
+
+``` json
+{
+    "require": {
+        "raulfraile/ladybug-bundle": "master-dev"
+    }
+}
+```
+To actually install Ladybug in your project, download the composer binary and run it:
+
+``` bash
+wget http://getcomposer.org/composer.phar
+# or
+curl -O http://getcomposer.org/composer.phar
+
+php composer.phar install
+```
+
+### Step 2: Enable the bundle
 
 Finally, enable the bundle in the kernel:
 
