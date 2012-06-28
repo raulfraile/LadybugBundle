@@ -18,7 +18,7 @@
         "raulfraile/ladybug":        ">=0.5"
     },
     "autoload": {
-        "psr-0": { "RaulFraile\\LadybugBundle": "" }
+        "psr-0": { "RaulFraile\\Bundle\\LadybugBundle": "" }
     },
-    "target-dir": "RaulFraile/LadybugBundle"
+    "target-dir": "RaulFraile/Bundle/LadybugBundle"
 }
