@@ -74,7 +74,7 @@ your dependencies in a `composer.json` file:
 ``` json
 {
     "require": {
-        "raulfraile/ladybug-bundle": "master-dev"
+        "raulfraile/ladybug-bundle": "dev-master"
     }
 }
 ```
