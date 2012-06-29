@@ -17,6 +17,9 @@
         "symfony/framework-bundle":  ">=2.0.0",
         "raulfraile/ladybug":        ">=0.5"
     },
+    "replace": {
+        "raulfraile/LadybugBundle": "dev-master"
+    },
     "autoload": {
         "psr-0": { "RaulFraile\\Bundle\\LadybugBundle": "" }
     },
