@@ -25,12 +25,19 @@ class LadybugExtension extends \Twig_Extension
             'ld'  => new \Twig_Filter_Method($this, 'ladybug_dump', array('is_safe' => array('html')))
         );
     }
+    
+    public function getFunctions()
+    {
+    	return array(
+    		'ladybug_dump'  => new \Twig_Function_Method($this, 'ladybug_dump', array('is_safe' => array('html'))),
+    		'ld'  => new \Twig_Function_Method($this, 'ladybug_dump', array('is_safe' => array('html')))
+    	);
+    }
 
-    public function ladybug_dump($var)
+    public function ladybug_dump()
     {
         $ladybug = \Ladybug\Dumper::getInstance();
-        $html = $ladybug->dump($var);
-
+        $html = call_user_func_array(array($ladybug,'dump'), func_get_args());
         return $html;
     }
 
