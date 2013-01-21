@@ -10,7 +10,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Input\ArrayInput;
 
 /**
- * trtr
+ * The AbstractCommand class.
  */
 abstract class AbstractCommand extends ContainerAwareCommand
 {
