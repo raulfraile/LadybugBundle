@@ -221,7 +221,7 @@ You can configure ladybug library directly in your `config.yml` file. Here are t
 ``` yaml
 raul_fraile_ladybug:
     general:
-        expanded:             true
+        expanded:             false
     object:
         max_nesting_level:    3
         show_data:            true
@@ -249,4 +249,3 @@ raul_fraile_ladybug:
     css:
         path:                 /Asset/tree.min.css
 ```
-
