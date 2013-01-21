@@ -5,6 +5,9 @@ namespace RaulFraile\Bundle\LadybugBundle\DependencyInjection;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 
+/**
+ * Set the configuration of the bundle.
+ */
 class Configuration implements ConfigurationInterface
 {
     /**
@@ -72,8 +75,7 @@ class Configuration implements ConfigurationInterface
                         ->scalarNode('path')->defaultValue('/Asset/tree.min.css')->end()
                     ->end()
                 ->end()
-            ->end()
-        ;
+            ->end();
 
         return $treeBuilder;
     }

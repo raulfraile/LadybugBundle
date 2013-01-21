@@ -7,8 +7,17 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 use Symfony\Component\Config\FileLocator;
 
+/**
+ * Bundle extension.
+ */
 class RaulFraileLadybugExtension extends Extension
 {
+    /**
+     * Load the bundle extension.
+     *
+     * @param array            $configs   The config parameters
+     * @param ContainerBuilder $container The DI container
+     */
     public function load(array $configs, ContainerBuilder $container)
     {
         $configuration = new Configuration();
