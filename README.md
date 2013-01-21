@@ -40,7 +40,7 @@ add the following entries to the `deps` in the root of your project file:
 ```
 [Ladybug]
     git=http://github.com/raulfraile/Ladybug.git
-    target=ladybug
+    target=Ladybug
 
 [RaulFraileLadybugBundle]
     git=http://github.com/raulfraile/LadybugBundle.git
