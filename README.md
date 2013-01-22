@@ -40,7 +40,7 @@ add the following entries to the `deps` in the root of your project file:
 ```
 [Ladybug]
     git=http://github.com/raulfraile/Ladybug.git
-    target=ladybug
+    target=Ladybug
 
 [RaulFraileLadybugBundle]
     git=http://github.com/raulfraile/LadybugBundle.git
@@ -61,7 +61,7 @@ Finally, add the following entries to your autoloader:
 
 $loader->registerNamespaces(array(
     // ...
-    'Ladybug'           => __DIR__.'/../vendor/ladybug/lib',
+    'Ladybug'           => __DIR__.'/../vendor/Ladybug/lib',
     'RaulFraile'        => __DIR__.'/../vendor/bundles',
 ));
 ```
@@ -109,7 +109,7 @@ public function registerBundles()
 ## Examples
 
 It is possible to dump any variable, including arrays, objects and resources:
-    
+
 ### Dumping an array
 
 ``` php
@@ -137,7 +137,7 @@ It is possible to dump any variable, including arrays, objects and resources:
     $img = imagecreatefrompng(__DIR__ . '/images/ladybug.png');
     ladybug_dump($img);
 ```
-    
+
 <img style="border:1px solid #ccc; padding:1px" src="https://github.com/raulfraile/Ladybug/raw/master/examples/images/gd_example.png" />
 
 The same can be accomplished using the Twig filter `ladybug_dump`.
@@ -148,7 +148,7 @@ The are 5 helpers that can be used in any controller:
 
 `ladybug_dump($var1[, $var2[, ...]])`: Dumps one or more variables
 
-`ladybug_dump_die($var1[, $var2[, ...]])`: Dumps one or more variables and 
+`ladybug_dump_die($var1[, $var2[, ...]])`: Dumps one or more variables and
 terminates the current script
 
 `ladybug_dump_return($format, $var1[, $var2[, ...]])`: Dumps one or more variables and
@@ -158,21 +158,21 @@ returns the dump in any of the following formats:
 * json: Returns the dump in JSON
 * xml: Returns the dump in XML
 * php: Returns the dump in PHP arrays
-        
-`ladybug_dump_ini([$extension])`: Dumps all configuration options 
-        
+
+`ladybug_dump_ini([$extension])`: Dumps all configuration options
+
 `ladybug_dump_ext()`: Dumps loaded extensions
-        
+
 There are also some shortcuts in case you are not using this function names:
-        
+
 `ld($var1[, $var2[, ...]])`: shortcut for ladybug_dump
-        
+
 `ldd($var1[, $var2[, ...]])`: shortcut for ladybug_dump_die
-        
+
 `ldr($format, $var1[, $var2[, ...]])`: shortcut for ladybug_return
 
 Only `ladybug_dump` can be used inside Twig templates.
-        
+
 ## Symfony command
 
 There are two Symfony commands to dump an instance of a given class or export it to
@@ -203,7 +203,7 @@ class TestController
     public function testAction()
     {
         $var = 1;
-        $this->get('ladybug')->log($var);    
+        $this->get('ladybug')->log($var);
     }
 ```
 
@@ -219,34 +219,33 @@ official documentation.
 You can configure ladybug library directly in your `config.yml` file. Here are the defaults:
 
 ``` yaml
-raul_fraile_ladybug:  
-    general:              
-        expanded:             true 
-    object:               
-        max_nesting_level:    3 
-        show_data:            true 
-        show_classinfo:       true 
-        show_constants:       true 
-        show_methods:         true 
-        show_properties:      true 
-    array:                
-        max_nesting_level:    8 
-    processor:            
-        active:               true 
-    bool:                 
-        html_color:           #008 
-        cli_color:            blue 
-    float:                
-        html_color:           #800 
-        cli_color:            red 
-    int:                  
-        html_color:           #800 
-        cli_color:            red 
-    string:               
-        html_color:           #080 
-        cli_color:            green 
-        show_quotes:          true 
-    css:                  
-        path:                 /Asset/tree.min.css 
+raul_fraile_ladybug:
+    general:
+        expanded:             false
+    object:
+        max_nesting_level:    3
+        show_data:            true
+        show_classinfo:       true
+        show_constants:       true
+        show_methods:         true
+        show_properties:      true
+    array:
+        max_nesting_level:    8
+    processor:
+        active:               true
+    bool:
+        html_color:           #008
+        cli_color:            blue
+    float:
+        html_color:           #800
+        cli_color:            red
+    int:
+        html_color:           #800
+        cli_color:            red
+    string:
+        html_color:           #080
+        cli_color:            green
+        show_quotes:          true
+    css:
+        path:                 /Asset/tree.min.css
 ```
-
