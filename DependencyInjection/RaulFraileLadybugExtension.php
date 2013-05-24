@@ -23,11 +23,7 @@ class RaulFraileLadybugExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
-        foreach ($config as $rootKey => $configurationSettings) {
-            foreach ($configurationSettings as $configKey => $configValue) {
-                ladybug_set(sprintf('%s.%s', $rootKey, $configKey), $configValue);
-            }
-        }
+        $container->setParameter('raul_fraile_ladybug.configs', $config);
 
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
