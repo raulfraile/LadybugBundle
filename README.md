@@ -39,7 +39,7 @@ add the following entries to the `deps` in the root of your project file:
 
 ```
 [Ladybug]
-    git=http://github.com/raulfraile/Ladybug.git
+    git=http://github.com/raulfraile/ladybug.git
     target=Ladybug
 
 [RaulFraileLadybugBundle]
@@ -74,7 +74,7 @@ your dependencies in a `composer.json` file:
 ``` json
 {
     "require": {
-        "raulfraile/ladybug-bundle": "dev-master"
+        "raulfraile/ladybug-bundle": "v0.61"
     }
 }
 ```
