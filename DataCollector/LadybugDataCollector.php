@@ -34,7 +34,7 @@ class LadybugDataCollector extends DataCollector
      */
     public function log()
     {
-        $ladybug = \Ladybug\Dumper::getInstance();
+        $ladybug = $this->container->get('ladybug.dumper');
         $content = call_user_func_array(array($ladybug,'dump'), func_get_args());
         $trace   = debug_backtrace();
 
