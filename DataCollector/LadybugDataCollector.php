@@ -36,6 +36,7 @@ class LadybugDataCollector extends DataCollector
     {
         $ladybug = $this->container->get('ladybug.dumper');
         $content = call_user_func_array(array($ladybug,'dump'), func_get_args());
+
         $trace   = debug_backtrace();
 
         $this->data['vars'][] = array(

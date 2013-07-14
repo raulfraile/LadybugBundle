@@ -67,8 +67,8 @@ class LadybugExtension extends \Twig_Extension
      */
     public function ladybug_dump()
     {
-        $ladybug = \Ladybug\Dumper::getInstance();
-        $html = call_user_func_array(array($ladybug,'dump'), func_get_args());
+        $ladybug = $this->container->get('ladybug.dumper');
+        $html = call_user_func_array(array($ladybug, 'dump'), func_get_args());
 
         return $html;
     }
