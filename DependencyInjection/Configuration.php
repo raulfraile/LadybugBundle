@@ -20,7 +20,8 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
-                ->scalarNode('theme')->end()
+                ->scalarNode('theme')->defaultValue('modern')->end()
+                ->scalarNode('expanded')->defaultValue(false)->end()
             ->end();
 
         return $treeBuilder;

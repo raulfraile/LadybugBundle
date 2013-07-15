@@ -6,8 +6,8 @@
     <services>
 
         <service id="ladybug.dumper" class="Ladybug\Dumper">
-            <call method="setTheme">
-                <argument>%ladybug.theme%</argument>
+            <call method="setOptions">
+                <argument>%ladybug.options%</argument>
             </call>
         </service>
 
