@@ -25,7 +25,7 @@ class RaulFraileLadybugExtension extends Extension
 
         foreach ($config as $rootKey => $configurationSettings) {
             foreach ($configurationSettings as $configKey => $configValue) {
-                ladybug_set(sprintf('%s.%s', $rootKey, $configKey), $configValue);
+                ladybug_set_option(sprintf('%s.%s', $rootKey, $configKey), $configValue);
             }
         }
 
