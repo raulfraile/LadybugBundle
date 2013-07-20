@@ -4,6 +4,13 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
+
+        <service id="ladybug.dumper" class="Ladybug\Dumper">
+            <call method="setOptions">
+                <argument>%ladybug.options%</argument>
+            </call>
+        </service>
+
         <service id="ladybug.twig.extension" class="RaulFraile\Bundle\LadybugBundle\Twig\Extension\LadybugExtension" public="false">
             <tag name="twig.extension" />
             <argument type="service" id="service_container"></argument>
@@ -15,5 +22,10 @@
         </service>
 
         <service id="ladybug" alias="data_collector.ladybug_data_collector" />
+
+        <service id="ladybug.event_listener.ladybug_config_listener" class="RaulFraile\Bundle\LadybugBundle\EventListener\LadybugConfigListener">
+            <argument>%ladybug.options%</argument>
+            <tag name="kernel.event_listener" event="kernel.request" method="onKernelRequest" />
+        </service>
     </services>
 </container>
