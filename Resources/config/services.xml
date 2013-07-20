@@ -14,6 +14,11 @@
             <tag name="data_collector" template="RaulFraileLadybugBundle:Collector:ladybug" id="ladybug" />
         </service>
 
+        <service id="ladybug.event_listener.ladybug_config_listener" class="RaulFraile\Bundle\LadybugBundle\EventListener\LadybugConfigListener">
+        	<argument>%raul_fraile_ladybug.configs%</argument>
+            <tag name="kernel.event_listener" event="kernel.request" method="onKernelRequest" />
+        </service>
+
         <service id="ladybug" alias="data_collector.ladybug_data_collector" />
     </services>
 </container>
