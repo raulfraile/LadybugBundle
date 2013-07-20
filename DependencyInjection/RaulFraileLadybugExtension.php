@@ -29,6 +29,7 @@ class RaulFraileLadybugExtension extends Extension
         }
 
         $container->setParameter('ladybug.options', $options);
+        ladybug_set_options($options);
 
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
