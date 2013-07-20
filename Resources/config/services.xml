@@ -22,5 +22,10 @@
         </service>
 
         <service id="ladybug" alias="data_collector.ladybug_data_collector" />
+
+        <service id="ladybug.event_listener.ladybug_config_listener" class="RaulFraile\Bundle\LadybugBundle\EventListener\LadybugConfigListener">
+            <argument>%ladybug.options%</argument>
+            <tag name="kernel.event_listener" event="kernel.request" method="onKernelRequest" />
+        </service>
     </services>
 </container>
