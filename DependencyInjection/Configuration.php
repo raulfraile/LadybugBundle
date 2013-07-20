@@ -22,6 +22,7 @@ class Configuration implements ConfigurationInterface
             ->children()
                 ->scalarNode('theme')->defaultValue('modern')->end()
                 ->scalarNode('expanded')->defaultValue(false)->end()
+                ->scalarNode('silenced')->defaultValue(false)->end()
             ->end();
 
         return $treeBuilder;
