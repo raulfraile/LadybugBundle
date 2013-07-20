@@ -220,32 +220,7 @@ You can configure ladybug library directly in your `config.yml` file. Here are t
 
 ``` yaml
 raul_fraile_ladybug:
-    general:
-        expanded:             false
-    object:
-        max_nesting_level:    3
-        show_data:            true
-        show_classinfo:       true
-        show_constants:       true
-        show_methods:         true
-        show_properties:      true
-    array:
-        max_nesting_level:    8
-    processor:
-        active:               true
-    bool:
-        html_color:           #008
-        cli_color:            blue
-    float:
-        html_color:           #800
-        cli_color:            red
-    int:
-        html_color:           #800
-        cli_color:            red
-    string:
-        html_color:           #080
-        cli_color:            green
-        show_quotes:          true
-    css:
-        path:                 /Asset/tree.min.css
+    theme: modern
+    expanded: false
+    silenced: false
 ```
