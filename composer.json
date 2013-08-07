@@ -18,7 +18,7 @@
         "raulfraile/ladybug":        ">=0.5"
     },
     "replace": {
-        "raulfraile/LadybugBundle": "dev-master"
+        "raulfraile/LadybugBundle": "v0.7"
     },
     "autoload": {
         "psr-0": { "RaulFraile\\Bundle\\LadybugBundle": "" }
