@@ -15,5 +15,7 @@ class RaulFraileLadybugBundle extends Bundle
      */
     public function __construct()
     {
+        // load the global helpers
+        \Ladybug\Loader::loadHelpers();
     }
 }
