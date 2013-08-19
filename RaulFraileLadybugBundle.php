@@ -11,11 +11,9 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 class RaulFraileLadybugBundle extends Bundle
 {
     /**
-     * Construcor, autoload helpers.
+     * Constructor.
      */
     public function __construct()
     {
-        // load the global helpers
-        \Ladybug\Loader::loadHelpers();
     }
 }
