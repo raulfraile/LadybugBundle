@@ -74,7 +74,7 @@ your dependencies in a `composer.json` file:
 ``` json
 {
     "require": {
-        "raulfraile/ladybug-bundle": "v0.7"
+        "raulfraile/ladybug-bundle": "1.0"
     }
 }
 ```
@@ -172,19 +172,6 @@ There are also some shortcuts in case you are not using this function names:
 `ldr($format, $var1[, $var2[, ...]])`: shortcut for ladybug_return
 
 Only `ladybug_dump` can be used inside Twig templates.
-
-## Symfony command
-
-There are two Symfony commands to dump an instance of a given class or export it to
-a file, in JSON, YAML or XML format.
-
-``` bash
-# php app/console ladybug:dump class_name [--all]
-# php app/console ladybug:export class_name target [--format=yaml]
-
-php app/console ladybug:dump "Symfony\Component\HttpFoundation\Request"
-php app/console ladybug:export "Symfony\Component\HttpFoundation\Request" export.json --format=json
-```
 
 ## Symfony profiler integration
 
