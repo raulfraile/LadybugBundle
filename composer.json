@@ -5,6 +5,7 @@
     "keywords": ["ladybug", "dump", "tree", "twig"],
     "homepage": "https://github.com/raulfraile/LadybugBundle",
     "license": "MIT",
+    "version": "v1.0.0",
     "authors": [
         {
             "name": "Raul Fraile",
@@ -15,7 +16,8 @@
     "require": {
         "php":                       ">=5.3.2",
         "symfony/framework-bundle":  ">=2.0.0",
-        "raulfraile/ladybug":        "dev-master"
+        "raulfraile/ladybug":        "~1.0.0",
+        "raulfraile/ladybug-plugin-symfony2":        "dev-master"
     },
     "replace": {
         "raulfraile/LadybugBundle": "dev-master"

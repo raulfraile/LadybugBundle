@@ -23,6 +23,8 @@ class Configuration implements ConfigurationInterface
                 ->scalarNode('theme')->defaultValue('modern')->end()
                 ->scalarNode('expanded')->defaultValue(false)->end()
                 ->scalarNode('silenced')->defaultValue(false)->end()
+                ->scalarNode('array_max_nesting_level')->defaultValue(9)->end()
+                ->scalarNode('object_max_nesting_level')->defaultValue(3)->end()
             ->end();
 
         return $treeBuilder;
