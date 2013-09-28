@@ -6,6 +6,7 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 use Symfony\Component\Config\FileLocator;
+use Ladybug\Dumper;
 
 /**
  * Bundle extension.
@@ -23,7 +24,11 @@ class RaulFraileLadybugExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
-        $options = array();
+        $options = array(
+            'extra_helpers' => array(
+                'RaulFraile\Bundle\LadybugBundle\DataCollector\LadybugDataCollector:log'
+            )
+        );
         foreach ($config as $rootKey => $configurationSettings) {
             $options[$rootKey] = $configurationSettings;
         }
@@ -33,5 +38,9 @@ class RaulFraileLadybugExtension extends Extension
 
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
+
+        /** @var $dumper Dumper */
+        $dumper = $container->get('ladybug.dumper');
+        $dumper->setOptions($options);
     }
 }
