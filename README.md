@@ -6,7 +6,6 @@ LadybugBundle
 [![Total Downloads](https://poser.pugx.org/raulfraile/ladybug-bundle/downloads.png)](https://packagist.org/packages/raulfraile/ladybug-bundle)
 [![Latest Unstable Version](https://poser.pugx.org/raulfraile/ladybug-bundle/v/unstable.png)](https://packagist.org/packages/raulfraile/ladybug-bundle)
 
-
 This bundle provides an easy and extensible var_dump/print_r replacement for
 Symfony2 projects, both in controllers or Twig templates. For example, with this
 bundle, the following is possible:
@@ -27,7 +26,7 @@ bundle, the following is possible:
 
 Getting as a result:
 
-<pre><strong><em>string(10)</em></strong> <span style="color:#080">"raulfraile"</span></pre>
+<img style="border:1px solid #ccc; padding:1px" src="https://github.com/raulfraile/LadybugBundle/raw/master/Resources/doc/images/string_example.png" />
 
 ## Installation
 
