@@ -175,3 +175,12 @@ raul_fraile_ladybug:
     expanded: false
     silenced: false
 ```
+
+## Credits
+
+* Raul Fraile ([@raulfraile](https://twitter.com/raulfraile))
+* [All contributors](https://github.com/raulfraile/LadybugBundle/contributors)
+
+## License
+
+LadybugBundle is released under the MIT License. See the bundled LICENSE file for details.
