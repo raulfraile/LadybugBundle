@@ -29,7 +29,7 @@ Getting as a result:
 
 ### Step 1: Install vendors
 
-To install this bundle, you'll need both the [Ladybug library](/raulfraile/Ladybug)
+To install this bundle, you'll need both the [Ladybug library](https://github.com/raulfraile/ladybug)
 and this bundle. Installation depends on your version of Symfony:
 
 #### Symfony 2.0.x: `bin/vendors.php` method
