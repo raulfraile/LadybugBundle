@@ -63,7 +63,6 @@ public function registerBundles()
 {
     $bundles = array(
         // ...
-
         new RaulFraile\Bundle\LadybugBundle\RaulFraileLadybugBundle(),
     );
 }
@@ -81,27 +80,16 @@ It is possible to dump any variable, including arrays, objects and resources:
     ladybug_dump($var)
 ```
 
-<img style="border:1px solid #ccc; padding:1px" src="https://github.com/raulfraile/Ladybug/raw/master/examples/images/array_example.png" />
+<img style="border:1px solid #ccc; padding:1px" src="https://github.com/raulfraile/LadybugBundle/raw/master/Resources/doc/images/string_example.png" />
 
 ### Dumping an object
 
 ``` php
 <?php
-    $var = new Foo();
-    ladybug_dump($var)
+    ladybug_dump($this->getRequest())
 ```
 
-<img style="border:1px solid #ccc; padding:1px" src="https://github.com/raulfraile/Ladybug/raw/master/examples/images/object_example.png" />
-
-### Dumping a GD image
-
-``` php
-<?php
-    $img = imagecreatefrompng(__DIR__ . '/images/ladybug.png');
-    ladybug_dump($img);
-```
-
-<img style="border:1px solid #ccc; padding:1px" src="https://github.com/raulfraile/Ladybug/raw/master/examples/images/gd_example.png" />
+<img style="border:1px solid #ccc; padding:1px" src="https://github.com/raulfraile/LadybugBundle/raw/master/Resources/doc/images/request_example.png" />
 
 The same can be accomplished using the Twig filter `ladybug_dump`.
 
