@@ -2,6 +2,10 @@ LadybugBundle
 =============
 
 [![Build Status](https://secure.travis-ci.org/raulfraile/LadybugBundle.png)](http://travis-ci.org/raulfraile/LadybugBundle)
+[![Latest Stable Version](https://poser.pugx.org/raulfraile/LadybugBundle/v/stable.png)](https://packagist.org/packages/raulfraile/LadybugBundle)
+[![Total Downloads](https://poser.pugx.org/raulfraile/LadybugBundle/downloads.png)](https://packagist.org/packages/raulfraile/LadybugBundle)
+[![Latest Unstable Version](https://poser.pugx.org/raulfraile/LadybugBundle/v/unstable.png)](https://packagist.org/packages/raulfraile/LadybugBundle)
+
 
 This bundle provides an easy and extensible var_dump/print_r replacement for
 Symfony2 projects, both in controllers or Twig templates. For example, with this
@@ -34,7 +38,7 @@ Add the following line to the `composer.json` file:
 ``` json
 {
     "require": {
-        "raulfraile/ladybug-bundle": "~1.0"
+        "raulfraile/ladybug-bundle": "1.0"
     }
 }
 ```
