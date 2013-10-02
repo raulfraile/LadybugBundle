@@ -17,7 +17,7 @@ bundle, the following is possible:
     }
 ```
 
-``` jinja
+``` twig
 {{ user.username|ladybug_dump }}
 ```
 
@@ -27,49 +27,9 @@ Getting as a result:
 
 ## Installation
 
-### Step 1: Install vendors
+### Step 1: Composer
 
-To install this bundle, you'll need both the [Ladybug library](https://github.com/raulfraile/ladybug)
-and this bundle. Installation depends on your version of Symfony:
-
-#### Symfony 2.0.x: `bin/vendors.php` method
-
-If you're using the `bin/vendors.php` method to manage your vendor libraries,
-add the following entries to the `deps` in the root of your project file:
-
-```
-[Ladybug]
-    git=http://github.com/raulfraile/ladybug.git
-    target=Ladybug
-
-[RaulFraileLadybugBundle]
-    git=http://github.com/raulfraile/LadybugBundle.git
-    target=/bundles/RaulFraile/Bundle/LadybugBundle
-```
-
-Next, update your vendors by running:
-
-``` bash
-$ ./bin/vendors
-```
-
-Finally, add the following entries to your autoloader:
-
-``` php
-<?php
-// app/autoload.php
-
-$loader->registerNamespaces(array(
-    // ...
-    'Ladybug'           => __DIR__.'/../vendor/Ladybug/lib',
-    'RaulFraile'        => __DIR__.'/../vendor/bundles',
-));
-```
-
-#### Symfony 2.1.x: Composer
-
-[Composer](http://packagist.org/about-composer) is a project dependency manager for PHP. You have to list
-your dependencies in a `composer.json` file:
+Add the following line to the `composer.json` file:
 
 ``` json
 {
