@@ -80,7 +80,7 @@ It is possible to dump any variable, including arrays, objects and resources:
     ladybug_dump($var)
 ```
 
-<img style="border:1px solid #ccc; padding:1px" src="https://github.com/raulfraile/LadybugBundle/raw/master/Resources/doc/images/string_example.png" />
+<img style="border:1px solid #ccc; padding:1px" src="https://github.com/raulfraile/LadybugBundle/raw/master/Resources/doc/images/array_example.png" />
 
 ### Dumping an object
 
@@ -129,7 +129,7 @@ Only `ladybug_dump` can be used inside Twig templates.
 Instead of printing out the dump tree inside the HTML document, you can use the Ladybug logger and
 see the results in a tab of the Symfony profiler:
 
-<img style="border:1px solid #ccc; padding:1px" src="https://github.com/raulfraile/LadybugBundle/raw/master/Resources/doc/images/symfony_profiler.png" />
+<img style="border:1px solid #ccc; padding:1px" src="https://github.com/raulfraile/LadybugBundle/raw/master/Resources/doc/images/profiler.png" />
 
 To make use of the Ladybug logger, grab the `ladybug` service from the DIC, and call the `log`
 method:
