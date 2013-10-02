@@ -2,9 +2,9 @@ LadybugBundle
 =============
 
 [![Build Status](https://secure.travis-ci.org/raulfraile/LadybugBundle.png)](http://travis-ci.org/raulfraile/LadybugBundle)
-[![Latest Stable Version](https://poser.pugx.org/raulfraile/LadybugBundle/v/stable.png)](https://packagist.org/packages/raulfraile/LadybugBundle)
-[![Total Downloads](https://poser.pugx.org/raulfraile/LadybugBundle/downloads.png)](https://packagist.org/packages/raulfraile/LadybugBundle)
-[![Latest Unstable Version](https://poser.pugx.org/raulfraile/LadybugBundle/v/unstable.png)](https://packagist.org/packages/raulfraile/LadybugBundle)
+[![Latest Stable Version](https://poser.pugx.org/raulfraile/ladybug-bundle/v/stable.png)](https://packagist.org/packages/raulfraile/ladybug-bundle)
+[![Total Downloads](https://poser.pugx.org/raulfraile/ladybug-bundle/downloads.png)](https://packagist.org/packages/raulfraile/ladybug-bundle)
+[![Latest Unstable Version](https://poser.pugx.org/raulfraile/ladybug-bundle/v/unstable.png)](https://packagist.org/packages/raulfraile/ladybug-bundle)
 
 
 This bundle provides an easy and extensible var_dump/print_r replacement for
