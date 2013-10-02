@@ -17,7 +17,7 @@ bundle, the following is possible:
     }
 ```
 
-``` twig
+``` jinja
 {{ user.username|ladybug_dump }}
 ```
 
@@ -34,7 +34,7 @@ Add the following line to the `composer.json` file:
 ``` json
 {
     "require": {
-        "raulfraile/ladybug-bundle": "1.0"
+        "raulfraile/ladybug-bundle": "~1.0"
     }
 }
 ```
