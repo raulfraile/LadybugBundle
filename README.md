@@ -36,11 +36,14 @@ Add the following line to the `composer.json` file:
 
 ``` json
 {
-    "require": {
+    "require-dev": {
         "raulfraile/ladybug-bundle": "~1.0"
     }
 }
 ```
+
+Usually you want to install ladybug only in development envireonment, otherwise, put on the block "require".
+
 To actually install Ladybug in your project, download the composer binary and run it:
 
 ``` bash
@@ -61,12 +64,15 @@ Finally, enable the bundle in the kernel:
 
 public function registerBundles()
 {
-    $bundles = array(
-        // ...
-        new RaulFraile\Bundle\LadybugBundle\RaulFraileLadybugBundle(),
-    );
+    // ...
+    if (in_array($this->getEnvironment(), array('dev', 'test'))) {
+        // ...    
+        $bundles[] = new RaulFraile\Bundle\LadybugBundle\RaulFraileLadybugBundle();
+    }
 }
 ```
+
+keep in mind that you are only enabling environments for dev and test
 
 ## Examples
 
