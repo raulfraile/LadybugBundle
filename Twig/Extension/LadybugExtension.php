@@ -3,6 +3,7 @@
 namespace RaulFraile\Bundle\LadybugBundle\Twig\Extension;
 
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Ladybug\Dumper;
 
 /**
  * Twig extension for the bundle.
@@ -10,28 +11,20 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 class LadybugExtension extends \Twig_Extension
 {
     /**
-     * @var ContainerInterface $container The Symfony2 DIC.
+     * @var Dumper
+     *
+     * Ladybug Dumper
      */
-    private $container;
+    private $ladybug;
 
     /**
-     * Main constructor.
+     * Main constructor
      *
-     * @param ContainerInterface $container
+     * @param Dumper $ladybug Ladybyg Dumper
      */
-    public function __construct(ContainerInterface $container)
+    public function __construct(Dumper $ladybug)
     {
-        $this->container = $container;
-    }
-
-    /**
-     * Getter.
-     *
-     * @return ContainerInterface
-     */
-    public function getContainer()
-    {
-        return $this->container;
+        $this->ladybug = $ladybug;
     }
 
     /**
@@ -67,8 +60,7 @@ class LadybugExtension extends \Twig_Extension
      */
     public function ladybug_dump()
     {
-        $ladybug = $this->container->get('ladybug.dumper');
-        $html = call_user_func_array(array($ladybug, 'dump'), func_get_args());
+        $html = call_user_func_array(array($this->ladybug, 'dump'), func_get_args());
 
         return $html;
     }

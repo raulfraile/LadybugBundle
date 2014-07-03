@@ -13,11 +13,11 @@
 
         <service id="ladybug.twig.extension" class="RaulFraile\Bundle\LadybugBundle\Twig\Extension\LadybugExtension" public="false">
             <tag name="twig.extension" />
-            <argument type="service" id="service_container"></argument>
+            <argument type="service" id="ladybug.dumper"></argument>
         </service>
 
         <service id="data_collector.ladybug_data_collector" class="RaulFraile\Bundle\LadybugBundle\DataCollector\LadybugDataCollector">
-        	<argument type="service" id="service_container" />
+            <argument type="service" id="ladybug.dumper" />
             <tag name="data_collector" template="RaulFraileLadybugBundle:Collector:ladybug" id="ladybug" />
         </service>
 

@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Ladybug\Dumper;
 
 /**
  * The LadybugDataCollector class.
@@ -14,19 +15,20 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 class LadybugDataCollector extends DataCollector
 {
     /**
+     * @var Dumper
      *
-     * @var ContainerInterface $container The Symfony DIC.
+     * Ladybug Dumper
      */
-    private $container;
+    private $ladybug;
 
     /**
-     * Main constructor.
+     * Main constructor
      *
-     * @param ContainerInterface $container
+     * @param Dumper $ladybug Ladybyg Dumper
      */
-    public function __construct(ContainerInterface $container)
+    public function __construct(Dumper $ladybug)
     {
-        $this->container = $container;
+        $this->ladybug = $ladybug;
     }
 
     /**
@@ -34,8 +36,7 @@ class LadybugDataCollector extends DataCollector
      */
     public function log()
     {
-        $ladybug = $this->container->get('ladybug.dumper');
-        $content = call_user_func_array(array($ladybug,'dump'), func_get_args());
+        $content = call_user_func_array(array($this->ladybug,'dump'), func_get_args());
 
         $trace   = debug_backtrace();
 
