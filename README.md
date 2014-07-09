@@ -42,7 +42,7 @@ Add the following line to the `composer.json` file:
 }
 ```
 
-Usually you want to install ladybug only in development envireonment, otherwise, put on the block "require".
+Usually you want to install ladybug only in development environment, otherwise, put on the block "require".
 
 To actually install Ladybug in your project, download the composer binary and run it:
 
