@@ -22,7 +22,6 @@
         "raulfraile/LadybugBundle": "dev-master"
     },
     "autoload": {
-        "psr-0": { "RaulFraile\\Bundle\\LadybugBundle": "" }
-    },
-    "target-dir": "RaulFraile/Bundle/LadybugBundle"
+        "psr-4": { "RaulFraile\\Bundle\\LadybugBundle\\": "" }
+    }
 }
