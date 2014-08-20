@@ -29,6 +29,7 @@ class LadybugDataCollector extends DataCollector
     public function __construct(Dumper $ladybug)
     {
         $this->ladybug = $ladybug;
+        $this->ladybug->setFormat('html');
     }
 
     /**
