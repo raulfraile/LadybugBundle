@@ -2,7 +2,6 @@
 
 namespace RaulFraile\Bundle\LadybugBundle\Twig\Extension;
 
-use Symfony\Component\DependencyInjection\ContainerInterface;
 use Ladybug\Dumper;
 
 /**
