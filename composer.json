@@ -18,6 +18,10 @@
         "raulfraile/ladybug":        "~1.0.0",
         "raulfraile/ladybug-plugin-symfony2":        "~1.0.0"
     },
+    "require-dev": {
+        "phpunit/phpunit": "@stable",
+        "mockery/mockery": "@stable"
+    },
     "replace": {
         "raulfraile/LadybugBundle": "dev-master"
     },
