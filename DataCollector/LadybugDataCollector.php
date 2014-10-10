@@ -55,7 +55,7 @@ class LadybugDataCollector extends DataCollector
      */
     public function getVars()
     {
-        return $this->data['vars'];
+        return isset($this->data['vars'])?$this->data['vars']:array();
     }
 
     /**
