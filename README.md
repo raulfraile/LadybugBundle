@@ -161,6 +161,8 @@ raul_fraile_ladybug:
     theme: modern # select the theme: base, modern or custom themes
     expanded: false # true to expand all the variables tree by default
     silenced: false # true to ignore all ladybug calls
+    array_max_nesting_level: 9 # array max nesting level
+    object_max_nesting_level: 3 # array max nesting level
 ```
 
 ## Credits
