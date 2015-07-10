@@ -35,7 +35,8 @@ class LadybugExtension extends \Twig_Extension
     {
         return array(
             'ladybug_dump' => new \Twig_Filter_Method($this, 'ladybug_dump', array('is_safe' => array('html'))),
-            'ld'  => new \Twig_Filter_Method($this, 'ladybug_dump', array('is_safe' => array('html')))
+            'ld'  => new \Twig_Filter_Method($this, 'ladybug_dump', array('is_safe' => array('html'))),
+            'ladybug_dump_profiler' => new \Twig_Filter_Method($this, 'ladybug_dump_profiler', array('is_safe' => array('html')))
         );
     }
 
@@ -48,7 +49,8 @@ class LadybugExtension extends \Twig_Extension
     {
         return array(
             'ladybug_dump' => new \Twig_Function_Method($this, 'ladybug_dump', array('is_safe' => array('html'))),
-            'ld'  => new \Twig_Function_Method($this, 'ladybug_dump', array('is_safe' => array('html')))
+            'ld'  => new \Twig_Function_Method($this, 'ladybug_dump', array('is_safe' => array('html'))),
+            'ladybug_dump_ profiler' => new \Twig_Function_Method($this, 'ladybug_dump_profiler', array('is_safe' => array('html')))
         );
     }
 
@@ -62,6 +64,16 @@ class LadybugExtension extends \Twig_Extension
         $html = call_user_func_array(array($this->ladybug, 'dump'), func_get_args());
 
         return $html;
+    }
+
+    /**
+     * Getter.
+     *
+     * @return string
+     */
+    public function ladybug_dump_profiler($object)
+    {
+        $this->ladybug->log($object);
     }
 
     /**
