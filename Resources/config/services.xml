@@ -14,6 +14,7 @@
         <service id="ladybug.twig.extension" class="RaulFraile\Bundle\LadybugBundle\Twig\Extension\LadybugExtension" public="false">
             <tag name="twig.extension" />
             <argument type="service" id="ladybug.dumper"></argument>
+            <argument type="service" id="data_collector.ladybug_data_collector"></argument>
         </service>
 
         <service id="data_collector.ladybug_data_collector" class="RaulFraile\Bundle\LadybugBundle\DataCollector\LadybugDataCollector">

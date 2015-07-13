@@ -3,6 +3,7 @@
 namespace RaulFraile\Bundle\LadybugBundle\Twig\Extension;
 
 use Ladybug\Dumper;
+use RaulFraile\Bundle\LadybugBundle\DataCollector\LadybugDataCollector;
 
 /**
  * Twig extension for the bundle.
@@ -17,13 +18,22 @@ class LadybugExtension extends \Twig_Extension
     private $ladybug;
 
     /**
+     * @var DataCollector
+     *
+     * DataCollector
+     */
+    private $dataCollector;
+
+    /**
      * Main constructor
      *
      * @param Dumper $ladybug Ladybyg Dumper
+     * @param DataCollector $dataCollector Ladybug DataCollector
      */
-    public function __construct(Dumper $ladybug)
+    public function __construct(Dumper $ladybug, LadybugDataCollector $dataCollector)
     {
         $this->ladybug = $ladybug;
+        $this->dataCollector = $dataCollector;
     }
 
     /**
@@ -73,7 +83,7 @@ class LadybugExtension extends \Twig_Extension
      */
     public function ladybug_dump_profiler($object)
     {
-        $this->ladybug->log($object);
+        $this->dataCollector->log($object);
     }
 
     /**
