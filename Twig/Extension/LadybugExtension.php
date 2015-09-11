@@ -34,8 +34,8 @@ class LadybugExtension extends \Twig_Extension
     public function getFilters()
     {
         return array(
-            'ladybug_dump' => new \Twig_Filter_Method($this, 'ladybug_dump', array('is_safe' => array('html'))),
-            'ld'  => new \Twig_Filter_Method($this, 'ladybug_dump', array('is_safe' => array('html')))
+            new \Twig_SimpleFilter('ladybug_dump',array($this, 'ladybug_dump', array('is_safe' => array('html')))),
+            new \Twig_SimpleFilter('ld',array($this, 'ladybug_dump', array('is_safe' => array('html')))),
         );
     }
 
@@ -47,8 +47,8 @@ class LadybugExtension extends \Twig_Extension
     public function getFunctions()
     {
         return array(
-            'ladybug_dump' => new \Twig_Function_Method($this, 'ladybug_dump', array('is_safe' => array('html'))),
-            'ld'  => new \Twig_Function_Method($this, 'ladybug_dump', array('is_safe' => array('html')))
+            new \Twig_SimpleFilter('ladybug_dump',array($this, 'ladybug_dump', array('is_safe' => array('html')))),
+            new \Twig_SimpleFilter('ld',array($this, 'ladybug_dump', array('is_safe' => array('html'))))
         );
     }
 
