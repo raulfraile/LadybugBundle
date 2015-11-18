@@ -14,7 +14,7 @@
     ],
     "require": {
         "php":                       ">=5.3.2",
-        "symfony/framework-bundle":  ">=2.0.0",
+        "symfony/framework-bundle":  "^2.0|^3.0",
         "raulfraile/ladybug":        "~1.0.0",
         "raulfraile/ladybug-plugin-symfony2":        "~1.0.0"
     },
