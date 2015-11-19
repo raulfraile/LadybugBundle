@@ -24,7 +24,7 @@ matrix:
   fast_finish: true
 
 before_install:
-  - if [[ "$SYMFONY_VERSION" != "" ]]; then composer require --no-update symfony/framework-bundle:${SYMFONY_VERSION}; fi
+  - if [[ "$SYMFONY_VERSION" != "" ]]; then composer require --no-update symfony/symfony:${SYMFONY_VERSION}; fi
 
 before_script:
   - composer self-update
