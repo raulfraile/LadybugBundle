@@ -32,23 +32,10 @@ Getting as a result:
 
 ### Step 1: Composer
 
-Add the following line to the `composer.json` file:
-
-``` json
-{
-    "require": {
-        "raulfraile/ladybug-bundle": "~1.0"
-    }
-}
-```
-To actually install Ladybug in your project, download the composer binary and run it:
+Install via composer:
 
 ``` bash
-wget http://getcomposer.org/composer.phar
-# or
-curl -O http://getcomposer.org/composer.phar
-
-php composer.phar install
+composer require raulfraile/ladybug-bundle
 ```
 
 ### Step 2: Enable the bundle
