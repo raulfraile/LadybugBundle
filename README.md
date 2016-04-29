@@ -37,7 +37,7 @@ Use [composer package manager](https://getcomposer.org/) to install Ladybug.
 To add Ladybug package to your project:
 
 ``` bash
-php composer.phar require raulfraile/ladybug
+php composer.phar require raulfraile/ladybug-bundle
 ```
 
 ### Step 2: Enable the bundle
