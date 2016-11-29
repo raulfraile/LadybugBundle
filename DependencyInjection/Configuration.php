@@ -21,6 +21,8 @@ class Configuration implements ConfigurationInterface
         $rootNode
             ->children()
                 ->scalarNode('theme')->defaultValue('modern')->end()
+                ->scalarNode('array_max_nesting_level')->defaultValue(5)->end()
+                ->scalarNode('object_max_nesting_level')->defaultValue(3)->end()
                 ->scalarNode('expanded')->defaultValue(false)->end()
                 ->scalarNode('silenced')->defaultValue(false)->end()
                 ->scalarNode('array_max_nesting_level')->defaultValue(9)->end()
